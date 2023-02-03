@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <head>
+        <title>Patient Transfer List</title>
+    </head>
+    <body>
+        <a href="{% url 'transfer_patient_list' %}">Patient List</a>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Address</th>
+            </tr>
+            {% for patient in patients %}
+            <tr>
+              <td>{{ patient.name }}</td>
+              <td>{{ patient.age }}</td>
+              <td>{{ patient.gender }}</td>
+              <td>{{ patient.address }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+    </body>
+    </html>
